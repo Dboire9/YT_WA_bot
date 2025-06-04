@@ -40,11 +40,12 @@ Copy the HTTPS URL provided by ngrok.
 
 #### 1. Summarize endpoint in url.py
 
-```bash
-curl -X POST "http://localhost:8000/summarize" \
-     -H "Content-Type: application/json" \
-     -d '{"video_id": "YOUR_VIDEO_ID"}'
-```
+
+response = requests.post(
+    "http://127.0.0.1:8000/summarize",
+    json={"video_id": "YOUR_VIDEO_ID"}
+)
+
 
 #### 2. WhatsApp integration
 
